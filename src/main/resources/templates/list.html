@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head th:replace="base :: headstuff">
+    <title>Title</title>
+</head>
+<body>
+<nav th:replace="base :: navbar"></nav>
+<div class="container">
+<a href="/add">Post Message</a><br/>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Message</th>
+    </tr>
+    <tr th:each="message:${messages}">
+        <td th:text="${message.name}"></td>
+        <td th:text="${message.postedDate}"></td>
+        <td th:text="${message.content}"></td>
+    </tr>
+</table>
+</div>
+<nav th:replace="base :: footer"></nav>
+<th:block th:replace="base :: jslinks"></th:block>
+</body>
+</html>
+

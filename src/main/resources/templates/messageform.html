@@ -16,7 +16,7 @@
     Date:<input type="text" th:field="*{postedDate}"/>
     <span th:if="${#fields.hasErrors('postedDate')}"
           th:errors="*{postedDate}"></span><br/>
-    Message:<input type="text" th:field="*{content}"/>
+    Message:<textarea rows="5" th:field="*{content}"/>
     <span th:if="${#fields.hasErrors('content')}"
           th:errors="*{content}"></span><br/>
     <br/>
